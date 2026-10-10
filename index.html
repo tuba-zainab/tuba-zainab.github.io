@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuba Zainab | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #222;
+        }
+
+        fieldset {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 25px 35px;
+            border: 2px solid #333;
+            background-color: white;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            position: relative;
+            padding-right: 235px;
+            min-height: 120px;
+        }
+
+        .profile-img {
+            width: 105px;
+            height: 105px;
+            object-fit: cover;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .profile-details h1 {
+            margin: 0 0 8px;
+            font-size: 27px;
+        }
+
+        .profile-details h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .contact-info {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            text-align: right;
+            font-size: 13px;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+        }
+
+        .bold-line {
+            border: none;
+            border-top: 2px solid #333;
+            margin: 18px 0;
+        }
+
+        h2 {
+            font-size: 21px;
+            margin: 0 0 12px;
+        }
+
+        .objective p {
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 0;
+        }
+
+        .education-row {
+            display: flex;
+            align-items: flex-start;
+            margin: 13px 0;
+            font-size: 14px;
+        }
+
+        .education-date {
+            width: 155px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        .education-detail {
+            padding-left: 20px;
+            border-left: 2px solid #777;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 8px;
+            }
+
+            fieldset {
+                padding: 18px;
+            }
+
+            .profile-container {
+                padding-right: 0;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .profile-img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .profile-details h1 {
+                font-size: 21px;
+            }
+
+            .contact-info {
+                position: static;
+                width: 100%;
+                text-align: left;
+            }
+
+            .education-date {
+                width: 125px;
+            }
+
+            .education-detail {
+                padding-left: 12px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+
 <fieldset>
 
     <!-- Profile Section -->
     <div class="profile-container">
+
         <img src="images.png"
              alt="Tuba Zainab Profile Photo"
              class="profile-img">
@@ -35,13 +175,14 @@
                 Rawalpindi, Pakistan
             </p>
         </div>
+
     </div>
 
     <hr class="bold-line">
 
     <!-- About Me -->
-    <div class="objective">
-        <h1>About Me</h1>
+    <section class="objective">
+        <h2>About Me</h2>
         <p>
             I am a Software Engineering student pursuing my bachelor's degree.
             I am interested in programming, web development, and learning new
@@ -50,88 +191,39 @@
             practical software development skills and contribute to meaningful
             technology projects.
         </p>
-    </div>
+    </section>
 
     <hr class="bold-line">
 
     <!-- Education -->
-    <h1>Education</h1>
+    <section>
+        <h2>Education</h2>
 
-    <div class="container">
-        <div class="left-date">
-            <p><b>2024 – Present</b></p>
-            <br>
-            <p><b>2022 – 2024</b></p>
-            <br>
-            <p><b>2020 – 2022</b></p>
+        <div class="education-row">
+            <div class="education-date">2024 – Present</div>
+            <div class="education-detail">
+                <strong>BS Software Engineering</strong>
+            </div>
         </div>
 
-        <div class="vertical-line"></div>
-
-        <div class="right-text">
-            <p>
-                <b>BS Software Engineering</b>
-            </p>
-            <br>
-            <p>
-                <b>Intermediate (ICS)</b>
-            </p>
-            <br>
-            <p>
-                <b>SSC Computer Science</b>
-            </p>
+        <div class="education-row">
+            <div class="education-date">2022 – 2024</div>
+            <div class="education-detail">
+                <strong>Intermediate (ICS)</strong>
+            </div>
         </div>
-    </div>
 
-    <br>
-    <hr class="bold-line">
-
-    <!-- Projects -->
-    <div>
-        <h1>Projects</h1>
-        <ul class="centered-list">
-            <li>Academic Programming Projects</li>
-            <li>Web Development Practice</li>
-            <li>Git and GitHub Practice</li>
-            <li>AI-Based Predictive Maintenance Project</li>
-        </ul>
-    </div>
-
-    <hr class="bold-line">
-
-    <!-- Technical Skills -->
-    <div>
-        <h1>Technical Skills</h1>
-
-        <ul class="centered-list">
-            <p><strong>Programming and Web Development</strong></p>
-            <li>C++</li>
-            <li>Object-Oriented Programming</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Basic JavaScript</li>
-            <li>Basic SQL</li>
-        </ul>
-
-        <ul class="centered-list">
-            <p><strong>Tools</strong></p>
-            <li>Git and GitHub</li>
-            <li>Visual Studio Code</li>
-            <li>Google Colab</li>
-        </ul>
-    </div>
-
-    <hr class="bold-line">
-
-    <!-- Languages -->
-    <div>
-        <h1>Languages</h1>
-        <div class="centered-list">
-            <p><strong>Urdu:</strong> Native</p>
-            <p><strong>English:</strong> Academic communication</p>
+        <div class="education-row">
+            <div class="education-date">2020 – 2022</div>
+            <div class="education-detail">
+                <strong>SSC Computer Science</strong>
+            </div>
         </div>
-    </div>
+
+    </section>
 
 </fieldset>
+
 </body>
 </html>
+```
